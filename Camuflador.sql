@@ -3,10 +3,6 @@
   
 GO
 
-IF (object_id('Camuflar') is not null)
-  drop function Camuflar
-;
-
 create function Camuflar
 (
   @TEXTO varchar(254)
