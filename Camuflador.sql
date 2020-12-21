@@ -1,6 +1,6 @@
-﻿IF (object_id('Camuflar') is not null)
+IF (object_id('Camuflar') is not null)
   drop function Camuflar
-  
+
 GO
 
 create function Camuflar
@@ -93,6 +93,8 @@ BEGIN
 		SET @OFUSCADA = @OFUSCADA + @LETRA2;
 		SET @CONTADOR = @CONTADOR + 1;
 	END
+
+	SET @OFUSCADA = UPPER(@OFUSCADA)
 	
 	return @OFUSCADA
 END
